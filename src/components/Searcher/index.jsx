@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { IconButton, Stack, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Searcher = (props) => {
   const { setInputUser } = props;
-
   const [valueInput, setValueInput] = useState("");
+  const input = useRef('');
 
   const onSearchValueChange = (event) => {
     const inputValue = event.target.value;
@@ -16,6 +16,16 @@ const Searcher = (props) => {
     setInputUser(valueInput);
   };
 
+  useEffect(() => {
+    input.current.addEventListener('keypress', (event) => {
+      if ( event.key === 'Enter') {
+        event.preventDefault();
+        console.log(event)
+        handleSubmit();
+      }
+    })
+  }, [])
+
   return (
     <Stack
       direction="row"
@@ -25,6 +35,7 @@ const Searcher = (props) => {
       }}
     >
       <TextField
+        ref={input}
         id="outlined-basic"
         label="GitHub User"
         placeholder="Find GitHub user"

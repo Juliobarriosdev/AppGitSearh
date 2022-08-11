@@ -13,8 +13,7 @@ const Description = (props) => {
           <Typography variant="body1">{bio}</Typography>
         ) : (
           <Typography variant="body1">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
-            rerum?
+            Has no description
           </Typography>
         )}
       </Stack>
