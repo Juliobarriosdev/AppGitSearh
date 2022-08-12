@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode development"
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "Julio Barrios <julio.barrios.9618@gmail.com>",
@@ -37,6 +40,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.3",
     "file-loader": "6.2.0",
+    "gh-pages": "^4.0.0",
     "html-loader": "3.1.0",
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "2.6.0",
@@ -47,5 +51,6 @@
   },
   "resolutions": {
     "@types/eslint": "8.4.3"
-  }
+  },
+  "homepage": "https://Juliobarriosdev.gitgub.io/AppGitSearh"
 }

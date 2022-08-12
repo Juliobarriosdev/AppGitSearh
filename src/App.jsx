@@ -25,7 +25,6 @@ const App = () => {
       setUserState(userResponse);
     }
   };
-  console.log(userState);
 
   useEffect(() => {
     gettingUser(inputUser);
