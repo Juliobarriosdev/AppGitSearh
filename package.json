@@ -8,7 +8,7 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Julio Barrios <julio.barrios.9618@gmail.com>",
@@ -52,5 +52,5 @@
   "resolutions": {
     "@types/eslint": "8.4.3"
   },
-  "homepage": "https://Juliobarriosdev.gitgub.io/AppGitSearh"
+  "homepage": "https://Juliobarriosdev.gitgub.io/app-git-search"
 }
